@@ -1,0 +1,16 @@
+type Stats = record {
+  price_24h_ago : nat64;
+  threshold_pct : nat64;
+  paused : bool;
+  btc_address : text;
+};
+
+service : {
+  "init" : () -> ();
+  "tick" : () -> ();
+  "get_logs" : () -> (vec text) query;
+  "send_demo_btc" : () -> (text);
+  "set_strategy" : (nat64) -> ();
+  "pause_ai" : (bool) -> ();
+  "get_stats" : () -> (Stats) query;
+}

@@ -1,0 +1,34 @@
+{
+  "canisters": {
+    "ai_canister": {
+      "candid": "src/ai_canister/ai_canister.did",
+      "package": "ai_canister",
+      "type": "rust"
+    },
+    "store_canister": {
+      "main": "src/store_canister/main.mo",
+      "type": "motoko"
+    },
+    "frontend": {
+      "dependencies": [
+        "ai_canister",
+        "store_canister"
+      ],
+      "frontend": {
+        "entrypoint": "frontend/index.html"
+      },
+      "source": [
+        "frontend/dist"
+      ],
+      "type": "assets"
+    }
+  },
+  "defaults": {
+    "build": {
+      "args": "",
+      "packtool": ""
+    }
+  },
+  "output_env_file": ".env",
+  "version": 1
+}

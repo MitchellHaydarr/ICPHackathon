@@ -1,0 +1,22 @@
+[package]
+name = "ai_canister"
+version = "0.1.0"
+edition = "2021"
+
+[lib]
+crate-type = ["cdylib"]
+
+[dependencies]
+candid = "0.10.0"
+ic-cdk = "0.13.0"
+ic-cdk-macros = "0.8.0"
+ic-cdk-timers = "0.6.0"
+serde = { version = "1.0", features = ["derive"] }
+serde_json = "1.0"
+async-trait = "0.1.74"
+ic-stable-structures = "0.6.0"
+ciborium = "0.2.1"
+base64 = "0.21.0"
+hex = "0.4.3"
+anyhow = "1.0.75"
+ic-bitcoin-types = { version = "0.2.1", features = ["serde"] }

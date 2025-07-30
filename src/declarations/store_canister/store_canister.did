@@ -1,0 +1,15 @@
+type Result = 
+ variant {
+   err: text;
+   ok: nat;
+ };
+service : {
+  deposit: () -> (Result);
+  get_all_portfolios: () -> (vec record {
+                                   principal;
+                                   nat;
+                                 }) query;
+  get_portfolio: (p: principal) -> (nat) query;
+  runTests: () -> (text);
+  withdraw: (amount: nat) -> (Result);
+}
